@@ -1,12 +1,12 @@
 jQuery.jkNav
 ============
 
-Smoothly navigate up and down between different elements on a page, even elements that are not siblings or are in any way related!
+Smoothly navigate up and down between different elements on a page, even elements that are not siblings or are in any way related! For a live example, check out [my personal blog](http://h0rrors.tumblr.com/).
 
 ## Required Files
 
     <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="jquery.coda.js"></script>
+    <script type="text/javascript" src="jquery.jkNav.js"></script>
 
 ## Usage Example (short form)
 
