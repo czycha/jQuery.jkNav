@@ -1,0 +1,52 @@
+<html>
+<head>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jquery.jknav.min.js"></script>
+<style type="text/css">
+ #ferris {
+  margin-bottom:500px;
+ }
+ #ferris li {
+  height:100px;
+ }
+ #bueller li {
+  height:100px;
+ }
+ li.o {
+  background-color:#f07;
+  color:#70f;
+ }
+ li.x {
+  color:#f07;
+  background-color:#70f;
+ }
+ #bueller {
+  margin-bottom:1200px;
+ }
+</style>
+<script type="text/javascript">
+ $(document).ready(function() {
+  $.jkNav('html, #dayoff div, #ferris li, #bueller .x, #faraway');
+ });
+</script>
+</head>
+<body>
+<div id="dayoff"><p>WHOA</p> <div>WHAT</div> <p>WHOA</p></div>
+<div id="ferris">
+<ul>
+ <li class="o">Gosh</li>
+ <li class="x">Darn</li>
+ <li class="o">It</li>
+</ul>
+</div>
+<div id="bueller">This list:
+<ol>
+ <li class="o">Uno</li>
+ <li class="x">Dos</li>
+ <li class="o">Tres</li>
+ <li class="x">Cuatro</li>
+</ol>
+</div>
+<div id="faraway">This is the last element!</div>
+</body>
+</html>
