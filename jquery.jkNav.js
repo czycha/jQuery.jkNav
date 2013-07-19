@@ -44,10 +44,10 @@ jQuery.jkNav=function(options) {
    if(e.which==jQuery('body').data('jkNav').up || e.which==jQuery('body').data('jkNav').down) {
     jQuery('body').data('inPort', {aLength:jQuery(jQuery('body').data('jkNav').selector).length});
     jQuery(jQuery('body').data('jkNav').selector).each(function(i) {
-     if((jQuery(document).scrollTop()-jQuery(this).offset().top)<(0-jQuery('body').data('jkNav').padding)) {
+     if((jQuery(document).scrollTop()-Math.round(jQuery(this).offset().top))<(0-jQuery('body').data('jkNav').padding)) {
 	  jQuery('body').data('inPort', {exact:false, element:jQuery(this), index:i, aLength:jQuery('body').data('inPort').aLength});
 	  return false;
-	 } else if((jQuery(document).scrollTop()-jQuery(this).offset().top)==(0-jQuery('body').data('jkNav').padding)) {
+	 } else if((jQuery(document).scrollTop()-Math.round(jQuery(this).offset().top))==(0-jQuery('body').data('jkNav').padding)) {
 	  jQuery('body').data('inPort', {exact:true, element:jQuery(this), index:i, aLength:jQuery('body').data('inPort').aLength});
 	  return false;
 	 }
@@ -56,16 +56,16 @@ jQuery.jkNav=function(options) {
      case jQuery('body').data('jkNav').up:
 	  if(jQuery('body').data('inPort').index!=0) {
 	   jQuery('body').data('jkNavtf', false);
-	   jQuery('body, html').animate({scrollTop:(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index-1).offset().top-jQuery('body').data('jkNav').padding)}, {'duration': jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
+	   jQuery('body, html').animate({scrollTop:(Math.round(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index-1).offset().top)-jQuery('body').data('jkNav').padding)}, {'duration': jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
 	  }
 	 break;
 	 case jQuery('body').data('jkNav').down:
 	  if((jQuery('body').data('inPort').aLength-1)!=jQuery('body').data('inPort').index && jQuery('body').data('inPort').exact==true) {
 	   jQuery('body').data('jkNavtf', false);
-	   jQuery('body, html').animate({scrollTop:(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index+1).offset().top-jQuery('body').data('jkNav').padding)}, {'duration': jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
+	   jQuery('body, html').animate({scrollTop:(Math.round(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index+1).offset().top)-jQuery('body').data('jkNav').padding)}, {'duration': jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
 	  } else if((jQuery('body').data('inPort').aLength-1)!=jQuery('body').data('inPort').index && jQuery('body').data('inPort').exact==false) {
 	   jQuery('body').data('jkNavtf', false);
-	   jQuery('body, html').animate({scrollTop:(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index).offset().top-jQuery('body').data('jkNav').padding)}, {'duration':  jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
+	   jQuery('body, html').animate({scrollTop:(Math.round(jQuery(jQuery('body').data('jkNav').selector).eq(jQuery('body').data('inPort').index).offset().top)-jQuery('body').data('jkNav').padding)}, {'duration':  jQuery('body').data('jkNav').duration, 'easing':'swing', 'complete':function(){jQuery('body').data('jkNavtf', true); jQuery('body').data('jkNav').complete();}});
 	  }
 	 break;
     }
