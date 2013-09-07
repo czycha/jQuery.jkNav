@@ -1,7 +1,7 @@
 jQuery.jkNav
 ============
 
-Smoothly navigate up and down between different elements on a page, even elements that are not siblings or are in any way related! For a live example, check out [my personal blog](http://h0rrors.tumblr.com/).
+Smoothly navigate up and down between different elements on a page, even elements that are not siblings or not related! jkNav is not a static script, meaning that it will continue to search for elements that match the criteria you provide (so if an element is added after jkNav is implemented, jkNav will still catch it). For a live example, check out [my personal blog](http://h0rrors.tumblr.com/).
 
 ## Required Files
 
@@ -28,5 +28,5 @@ The selector must be defined to work but the others are optional. By default, th
 * Currently only up and down but maybe I'll add options to go left and right and diagonally.
 * I would like to make the padding feature able to use a function so you could make the padding conditional based on the element and such.
 
-## About the use of jkNav
+## License: Public Domain
 Please don't rename it or change credit away from me, James Anthony Bruno, because that would make me sad. It is fine, however, to make changes to jkNav's core to suit your needs for use in your products (whether commercial, personal, or non-profit). If you believe you've found a better way for jkNav to work, go ahead and message me and let me know! I would love to implement your fix. 
