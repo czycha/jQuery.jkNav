@@ -1,7 +1,7 @@
 jQuery.jkNav
 ============
 
-Smoothly navigate up and down between different elements on a page, even elements that are not siblings or not related! jkNav is not a static script, meaning that it will continue to search for elements that match the criteria you provide (so if an element is added after jkNav is implemented, jkNav will still catch it). For a live example, check out [my personal blog](http://h0rrors.tumblr.com/).
+Smoothly navigate up and down between different elements on a page, even elements that are not siblings or not related! jkNav is not a static script, meaning that it will continue to search for elements that match the criteria you provide (so if an element is added after jkNav is implemented, jkNav will still catch it). For a live example, check out [my personal blog](http://iakovu.tumblr.com/).
 
 ## Required Files
 
